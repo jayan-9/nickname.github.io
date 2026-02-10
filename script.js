@@ -540,3 +540,24 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial load for default category
   generateStyles();
 });
+
+// Clear input function
+function clearInput() {
+  const nameInput = document.getElementById('nameInput');
+  if (nameInput) {
+    nameInput.value = '';
+    nameInput.focus();
+    
+    // Clear results
+    const result = document.getElementById('result');
+    if (result) {
+      result.innerHTML = `
+        <p class="info-text">
+          Enter a name and choose a category to generate stylish names.
+        </p>
+      `;
+    }
+    
+    showToast('Input cleared!');
+  }
+}
