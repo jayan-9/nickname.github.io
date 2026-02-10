@@ -26,36 +26,48 @@
 </header>
 
 <!-- ===== TOOL SECTION ===== -->
-<section class="tool-section">
+
+
+<!-- Suggestions Section (Initially hi<!-- ===== TOOL SECTION ===== -->
+<section class="tool-section" id="stickyToolbar">
   <div class="container">
     <div class="input-box">
       <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="off">
       <button onclick="generateStyles()" class="primary-btn">
-        Generate Styles
+        <i class="fas fa-magic"></i> Generate Styles
       </button>
     </div>
 
     <div class="categories">
-      <button onclick="selectCategory('love')" class="tab-btn active" data-tab="love">Love</button>
-      <button onclick="selectCategory('gamer')" class="tab-btn" data-tab="gamer">Gamer</button>
-      <button onclick="selectCategory('fancy')" class="tab-btn" data-tab="fancy">Fancy</button>
-      <button onclick="selectCategory('font')" class="tab-btn" data-tab="font">Fonts</button>
+      <button onclick="selectCategory('love')" class="tab-btn active" data-tab="love">
+        <i class="fas fa-heart"></i> Love
+      </button>
+      <button onclick="selectCategory('gamer')" class="tab-btn" data-tab="gamer">
+        <i class="fas fa-gamepad"></i> Gamer
+      </button>
+      <button onclick="selectCategory('fancy')" class="tab-btn" data-tab="fancy">
+        <i class="fas fa-crown"></i> Fancy
+      </button>
+      <button onclick="selectCategory('font')" class="tab-btn" data-tab="font">
+        <i class="fas fa-font"></i> Fonts
+      </button>
     </div>
 
-    <!-- Suggestions toggle button -->
-    <div style="margin-top: 20px; text-align: center;">
+    <!-- Quick action buttons -->
+    <div class="quick-actions">
       <button onclick="toggleSuggestions()" class="secondary-btn">
-        <i class="fas fa-lightbulb"></i> Show Name Suggestions
+        <i class="fas fa-lightbulb"></i> Suggestions
       </button>
-      
-      <button onclick="openSymbolModal()" class="secondary-btn" style="margin-left: 10px;">
-        <i class="fas fa-symbols"></i> Symbol Picker
+      <button onclick="openSymbolModal()" class="secondary-btn">
+        <i class="fas fa-symbols"></i> Symbols
+      </button>
+      <button onclick="clearInput()" class="secondary-btn">
+        <i class="fas fa-trash"></i> Clear
       </button>
     </div>
   </div>
 </section>
-
-<!-- Suggestions Section (Initially hidden) -->
+  
 <section id="suggestionsSection" class="suggestions-section"></section>
 
 <!-- ===== RESULTS ===== -->
